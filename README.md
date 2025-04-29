@@ -35,7 +35,7 @@
 1. Clone the repository:
 
 ```bash
-git clone <repository-url>
+git clone https://github.com/ntthanh2603/nestjs-log-elk.git
 cd nestjs-log-elk
 ```
 
