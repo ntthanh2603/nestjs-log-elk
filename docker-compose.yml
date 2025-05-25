@@ -45,10 +45,15 @@ services:
     ports:
       - '3000:3000'
     volumes:
+      - .:/usr/src/app
+      - /usr/src/app/node_modules
       - ./nestjs-logs:/usr/src/app/nestjs-logs
+    environment:
+      - NODE_ENV=development
     restart: unless-stopped
     depends_on:
       - elasticsearch
+    command: npm run start:dev
 
 volumes:
   elasticsearch_data:

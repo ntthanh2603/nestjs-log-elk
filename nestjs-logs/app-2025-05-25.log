@@ -1,10 +1,3 @@
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T04:44:31.534Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T04:44:31.744Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T04:44:31.993Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T04:44:34.310Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T04:44:34.488Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T04:44:34.648Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T05:07:36.408Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T05:07:41.043Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T05:07:41.632Z"}
-{"level":"info","message":"Welcome to home page","timestamp":"2025-05-25T05:08:10.201Z"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"25/05/2025, 06:40:22"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"25/05/2025, 06:40:22"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"25/05/2025, 06:40:26"}
