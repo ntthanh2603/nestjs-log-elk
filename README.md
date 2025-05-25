@@ -32,31 +32,20 @@
 
 ## 🔧 Installation
 
-1. Clone the repository:
+Clone the repository:
 
 ```bash
 git clone https://github.com/ntthanh2603/nestjs-log-elk.git
 cd nestjs-log-elk
 ```
 
-2. Install dependencies:
-
-```bash
-npm install
-```
-
-3. Create necessary directories:
-
-```bash
-mkdir -p nestjs-log/logs
-```
 
 ## 🚀 Running The App
 
 1. Start the ELK stack and application:
 
 ```bash
-docker-compose up -d
+docker-compose up --build -d
 ```
 
 2. Access the services:
@@ -72,7 +61,7 @@ The application uses Winston for logging with the following configuration:
 - Log Format: JSON
 - Log Levels: info, error, warn
 - Storage: File system and Console output
-- Log Directory: `nestjs-log/logs/app.log`
+- Log Directory: `nestjs-logs/app*.log`
 
 Example log output:
 
@@ -97,7 +86,9 @@ Example log output:
 ```
 nestjs-log-elk/
 ├── src/
-│   └── logger.ts          # Winston logger configuration
+│   └── logger/          # Configuration for Winston logger
+│          ├── log-nest.service.ts/   
+│          └── logger.module.ts/        
 ├── filebeat/
 │   ├── Dockerfile         # Filebeat container configuration
 │   └── filebeat.yml       # Filebeat configuration
@@ -110,7 +101,7 @@ nestjs-log-elk/
 
 1. Access Kibana at http://localhost:5601
 2. Navigate to "Discover" section
-3. Create an index pattern: `nest-app-*`
+3. Create an index pattern: `nest-app*`
 4. View and analyze logs in real-time
 
 ## 🛠 Troubleshooting
