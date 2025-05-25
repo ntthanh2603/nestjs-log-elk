@@ -30,7 +30,7 @@ services:
     container_name: filebeat
     user: root
     volumes:
-      - ./nestjs-log/logs:/src/log:ro
+      - ./nestjs-logs:/usr/src/app/nestjs-logs:ro
       - ./filebeat/filebeat.yml:/usr/share/filebeat/filebeat.yml:ro
     depends_on:
       - elasticsearch
@@ -45,9 +45,10 @@ services:
     ports:
       - '3000:3000'
     volumes:
-      - ./nestjs-log/logs:/src/log
+      - ./nestjs-logs:/usr/src/app/nestjs-logs
     restart: unless-stopped
+    depends_on:
+      - elasticsearch
 
 volumes:
   elasticsearch_data:
-    driver: local

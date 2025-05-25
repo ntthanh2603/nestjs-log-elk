@@ -1,18 +1,22 @@
 name: 'nest-app-filebeat'
 logging.metrics.enabled: false
-xpack.security.enabled: false
 xpack.monitoring.enabled: false
-setup.template.enabled: false
+setup.kibana:
+  host: "kibana:5601"
+
+setup.template.enabled: true
+setup.template.name: "nest-app"
+setup.template.pattern: "nest-app-*"
+setup.ilm.enabled: false
 
 filebeat.inputs:
   - type: log
     scan_frequency: 1s
     enabled: true
     paths:
-      - /src/log/*.log
+      - /usr/src/app/nestjs-logs/app*.log  
     fields:
       service: nestjs-app
-
     fields_under_root: true
     json:
       keys_under_root: true
