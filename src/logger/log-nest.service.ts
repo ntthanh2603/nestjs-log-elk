@@ -22,7 +22,6 @@ export class LogNestService implements LoggerService {
               const strPid = chalk.green(`${pid}`);
               const strContext = chalk.yellow(`[${context}]`);
 
-              // Format level như NestJS
               let formattedLevel = '';
               switch (level) {
                 case 'info':
@@ -41,7 +40,6 @@ export class LogNestService implements LoggerService {
                   formattedLevel = level.toUpperCase();
               }
 
-              // Format giống NestJS: [Nest] PID  - DD/MM/YYYY, HH:mm:ss AM/PM     LEVEL [Context] Message
               return `${strApp} ${strPid}  - ${time}     ${formattedLevel} ${strContext} ${message}`;
             }),
           ),
@@ -65,7 +63,7 @@ export class LogNestService implements LoggerService {
   }
 
   log(message: string, context: string) {
-    const time = dayjs().format('DD/MM/YYYY, h:mm:ss A'); // Format với AM/PM
+    const time = dayjs().format('DD/MM/YYYY, h:mm:ss A');
     this.logger.log('info', message, { context, time });
   }
 
