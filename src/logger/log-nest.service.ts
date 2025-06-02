@@ -2,7 +2,7 @@
 import { Injectable, LoggerService } from '@nestjs/common';
 import { createLogger, Logger, format, transports } from 'winston';
 import * as dayjs from 'dayjs';
-import chalk from 'chalk';
+import * as chalk from 'chalk';
 import * as path from 'path';
 import 'winston-daily-rotate-file';
 
@@ -12,46 +12,75 @@ export class LogNestService implements LoggerService {
 
   constructor() {
     this.logger = createLogger({
-      level: 'info',
+      level: 'debug',
       transports: [
         new transports.Console({
           format: format.combine(
-            format.colorize(),
             format.printf(({ context, message, level, time }) => {
+              const pid = process.pid;
               const strApp = chalk.green('[Nest]');
+              const strPid = chalk.green(`${pid}`);
               const strContext = chalk.yellow(`[${context}]`);
-              return `${strApp}     - ${time}        ${level} ${strContext} ${message}`;
+
+              // Format level như NestJS
+              let formattedLevel = '';
+              switch (level) {
+                case 'info':
+                  formattedLevel = chalk.green('LOG');
+                  break;
+                case 'error':
+                  formattedLevel = chalk.red('ERROR');
+                  break;
+                case 'warn':
+                  formattedLevel = chalk.yellow('WARN');
+                  break;
+                case 'debug':
+                  formattedLevel = chalk.magenta('DEBUG');
+                  break;
+                default:
+                  formattedLevel = level.toUpperCase();
+              }
+
+              // Format giống NestJS: [Nest] PID  - DD/MM/YYYY, HH:mm:ss AM/PM     LEVEL [Context] Message
+              return `${strApp} ${strPid}  - ${time}     ${formattedLevel} ${strContext} ${message}`;
             }),
           ),
         }),
         new transports.DailyRotateFile({
-          level: 'info',
+          level: 'debug',
           dirname: path.join(__dirname, '../../nestjs-logs/'),
-          filename: path.join(__dirname, 'app-%DATE%.log'),
+          filename: 'app-%DATE%.log',
           datePattern: 'YYYY-MM-DD',
           maxSize: '100m',
+          format: format.combine(
+            format.printf(({ context, message, level, time }) => {
+              const pid = process.pid;
+              const formattedLevel = level.toUpperCase();
+              return `[Nest] ${pid}  - ${time}     ${formattedLevel} [${context}] ${message}`;
+            }),
+          ),
         }),
       ],
     });
   }
 
   log(message: string, context: string) {
-    const time = dayjs().format('DD/MM/YYYY, HH:mm:ss');
+    const time = dayjs().format('DD/MM/YYYY, h:mm:ss A'); // Format với AM/PM
     this.logger.log('info', message, { context, time });
   }
 
   error(message: string, context: string) {
-    const time = dayjs().format('DD/MM/YYYY, HH:mm:ss');
+    const time = dayjs().format('DD/MM/YYYY, h:mm:ss A');
     this.logger.error(message, { context, time });
   }
 
   warn(message: string, context: string) {
-    const time = dayjs().format('DD/MM/YYYY, HH:mm:ss');
+    const time = dayjs().format('DD/MM/YYYY, h:mm:ss A');
     this.logger.warn(message, { context, time });
   }
 
   debug(message: string, context: string) {
-    const time = dayjs().format('DD/MM/YYYY, HH:mm:ss');
+    const time = dayjs().format('DD/MM/YYYY, h:mm:ss A');
     this.logger.debug(message, { context, time });
   }
 }

@@ -1,0 +1,51 @@
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:18:57"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:17"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:18"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:18"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:18"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:18"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:19"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:19"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:33"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:34"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:34"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:34"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:34"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:34"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:35"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:42"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:43"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 08:21:43"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:33:42"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:33:42"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:33:42"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:33:43"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:33:43"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:33:43"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:33:52"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:33:52"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:33:52"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:34:14"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:34:14"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:34:14"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:35:36"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:35:36"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:35:36"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:35:52"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:35:52"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:35:52"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:36:55"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:36:55"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:37:04"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:37:04"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:37:11"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:37:11"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:37:11"}
+{"context":"AppController","level":"info","message":"Hello from the controller","time":"02/06/2025, 15:42:04"}
+{"context":"AppController","level":"debug","message":"Debugging the controller","time":"02/06/2025, 15:42:04"}
+{"context":"AppController","level":"warn","message":"This is a warning","time":"02/06/2025, 15:42:04"}
+{"context":"AppController","level":"error","message":"This is an error","time":"02/06/2025, 15:42:04"}
+[Nest] 26704  - 02/06/2025, 3:43:55 PM     INFO [AppController] Hello from the controller
+[Nest] 26704  - 02/06/2025, 3:43:55 PM     DEBUG [AppController] Debugging the controller
+[Nest] 26704  - 02/06/2025, 3:43:55 PM     WARN [AppController] This is a warning
+[Nest] 26704  - 02/06/2025, 3:43:55 PM     ERROR [AppController] This is an error

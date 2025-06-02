@@ -12,6 +12,9 @@ export class AppController {
   @Get()
   getHello(): string {
     this.logNestService.log('Hello from the controller', 'AppController');
+    this.logNestService.debug('Debugging the controller', 'AppController');
+    this.logNestService.warn('This is a warning', 'AppController');
+    this.logNestService.error('This is an error', 'AppController');
     return this.appService.getHello();
   }
 
